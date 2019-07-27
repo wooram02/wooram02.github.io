@@ -11,7 +11,7 @@ tags:
 ---
 
 
-![pinspot01](/assets/images/pinspot.gif)
+![pinspot01](/assets/images/face.jpg)
 <!-- [알트태그 (시각장애인을 위한설명)] -->
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
