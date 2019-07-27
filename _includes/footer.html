@@ -1,12 +1,20 @@
-<footer id="bottom">
-  <br>
-  <span>{{ site.title }} ©
-  {% assign current = "now" | date: "%Y" | plus: 0%}
-  {% unless site.footer.since and site.footer.since == current %}
-    {{ site.footer.since }}
-    -
-  {% endunless %}
-  {{ current }}
-  <br>
-  Powered by <a href="https://www.jekyll.com.cn/">Jekyll</a> | <a href="https://github.com/xukimseven/HardCandy-Jekyll">HardCandy-Jekyll</a></span>
+<!-- The footer at the very bottom of the screen -->
+<footer class="footer section-padding">
+  <div class="footer__container">
+    {% include social.html %}
+  </div>
+  <!-- copyright 표시 -->
+  <div class="copyright">
+    © Wooram Mo. 2019
+  </div>
 </footer>
+
+{% include contact.html %}
+
+{% if paginator.next_page %}
+  <script>
+    var maxPages = parseInt('{{ paginator.total_pages }}');
+  </script>
+{% endif %}
+
+<script src="{{ '/assets/js/app.min.js' | prepend: site.baseurl }}"></script>

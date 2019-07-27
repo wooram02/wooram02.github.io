@@ -1,42 +1,28 @@
 ---
-layout: default
-title: 关于我
-page-title: aboutMe
-home-title: Show you about me.
-description:
----
 
-{% include header.html %}
-{% include boot.html %}
-<main>
-    {% include title.html %}
-    <ul class="ex-list">
-        <li class="fadeInUp animated">
-        {% if site.author %}
-          <div class="portraits"><img src="{{ site.portraits }}" alt=""></div>
-          <span id="yourname">{{ site.name }}</span>
-          <span id="yourbio">{{ site.bio }}</span>
-          {% if site.about %}
-            <span id="aboutyou">{{ site.aboutyou }}</span>
-          {% endif %}
-        {% endif %}
-        {% if site.SNS %}
-          {% for sns-icon in site.SNS-icon %}
-            <a href="{{ sns-icon[1] }}" title="{{ sns-icon[0] }}">
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-{{ sns-icon[0] }}"></use>
-              </svg>
-            </a>
-          {% endfor%}
-        {% endif %}
-      </li>
-      <li class="fadeInUp animated">
-      {% if site.tags.size>0 %}
-          {% for tag in site.tags %}
-          <a href="tags.html#{{ tag[0] }}" class="tag">{{ tag[0]}}</a>
-          {% endfor %}
-      {% endif %}
-      </li>
-    </ul>
-</main>
-{% include footer.html %}
+layout: page
+title: about
+
+---
+<!-- 자기 소개 내용 추가 -->
+<div class="about">
+	<h2> 저를 찾아내셨군요!<br>
+	I am Eunji, a product designer based in Seoul 🤟</h2>
+	<br>
+
+	<p> 
+		Hey, there. I'm Eunji jeong, a Visual Interaction Designer based in Korea. I have been designing digital solution for the last six years and collaborating with multi-disciplinary groups to solve complex problems and create intuitive experiences.
+	</p>
+	<p>
+		My skills include Interface, interactive, mobile, identity, motion design and prototyping. I’m interested in clean aesthetics, unusual artwork and simple UX solutions.
+	</p>
+</div>
+
+
+
+<!-- jquery로 네비게이션에 현재 위치 표시 -->
+<!-- <script type="text/javascript">
+  $( document ).ready(function() {
+      $('.header__list li:last-child').addClass("active");
+  });
+</script> -->

@@ -1,18 +1,33 @@
 ---
 layout: default
-title: your awesome title
-page-title: your awesome page-title.
-home-title: your awesome home-title.
-description: description
+pagination:
+  enabled: true
 ---
+<!-- The main content area -->
 
-{% include header.html %}
-{% include boot.html %}
-<main>
-    {% include title.html %}
-    <ul class="post-list">
-      {% include posts_paginator.html %}
-    </ul>
-</main>
-{% include pageNav.html %}
-{% include footer.html %}
+<!-- 인트로 문구 추가 -->
+<div class="intro">
+  Hello I'm UXUI Designer <br>
+  based in SEOUL.
+</div>
+
+<div class="posts">
+  <div class="grid-xlarge">
+    <div class="posts__container" itemscope itemtype="http://schema.org/Blog" data-columns>
+
+      {% for post in site.posts %}
+        {% include post-card.html %}
+      {% endfor %}
+      
+    </div>
+  </div>
+
+  {% include pagination.html %}
+</div>
+
+<!-- jquery로 네비게이션에 현재 위치 표시 -->
+<!-- <script type="text/javascript">
+  $( document ).ready(function() {
+      $('.header__list li:first-child').addClass("active");
+  });
+</script> -->
